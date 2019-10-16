@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		37282BE12357B87100D596B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37282BE02357B87100D596B3 /* AppDelegate.m */; };
 		37282BE42357B87100D596B3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37282BE32357B87100D596B3 /* SceneDelegate.m */; };
-		37282BE72357B87100D596B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37282BE62357B87100D596B3 /* ViewController.m */; };
 		37282BEA2357B87100D596B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37282BE82357B87100D596B3 /* Main.storyboard */; };
 		37282BEC2357B87200D596B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37282BEB2357B87200D596B3 /* Assets.xcassets */; };
 		37282BEF2357B87200D596B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37282BED2357B87200D596B3 /* LaunchScreen.storyboard */; };
 		37282BF22357B87200D596B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37282BF12357B87200D596B3 /* main.m */; };
+		37282BFE2357BC4800D596B3 /* MJRContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 37282BFD2357BC4800D596B3 /* MJRContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +22,13 @@
 		37282BE02357B87100D596B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37282BE22357B87100D596B3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		37282BE32357B87100D596B3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		37282BE52357B87100D596B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		37282BE62357B87100D596B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		37282BE92357B87100D596B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37282BEB2357B87200D596B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37282BEE2357B87200D596B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37282BF02357B87200D596B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37282BF12357B87200D596B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37282BFC2357BC4800D596B3 /* MJRContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRContact.h; sourceTree = "<group>"; };
+		37282BFD2357BC4800D596B3 /* MJRContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +61,67 @@
 		37282BDE2357B87000D596B3 /* Memory-Management */ = {
 			isa = PBXGroup;
 			children = (
-				37282BDF2357B87000D596B3 /* AppDelegate.h */,
-				37282BE02357B87100D596B3 /* AppDelegate.m */,
-				37282BE22357B87100D596B3 /* SceneDelegate.h */,
-				37282BE32357B87100D596B3 /* SceneDelegate.m */,
-				37282BE52357B87100D596B3 /* ViewController.h */,
-				37282BE62357B87100D596B3 /* ViewController.m */,
-				37282BE82357B87100D596B3 /* Main.storyboard */,
+				37282C002357BEF900D596B3 /* Views */,
+				37282BFF2357BEEB00D596B3 /* ViewControllers */,
+				37282BFB2357BC0200D596B3 /* ModelControllers */,
+				37282BFA2357BBF900D596B3 /* Models */,
+				37282BF92357BBED00D596B3 /* Storyboards */,
+				37282BF82357BBDC00D596B3 /* Resources */,
 				37282BEB2357B87200D596B3 /* Assets.xcassets */,
-				37282BED2357B87200D596B3 /* LaunchScreen.storyboard */,
 				37282BF02357B87200D596B3 /* Info.plist */,
 				37282BF12357B87200D596B3 /* main.m */,
 			);
 			path = "Memory-Management";
+			sourceTree = "<group>";
+		};
+		37282BF82357BBDC00D596B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37282BDF2357B87000D596B3 /* AppDelegate.h */,
+				37282BE02357B87100D596B3 /* AppDelegate.m */,
+				37282BE22357B87100D596B3 /* SceneDelegate.h */,
+				37282BE32357B87100D596B3 /* SceneDelegate.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37282BF92357BBED00D596B3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				37282BE82357B87100D596B3 /* Main.storyboard */,
+				37282BED2357B87200D596B3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		37282BFA2357BBF900D596B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37282BFC2357BC4800D596B3 /* MJRContact.h */,
+				37282BFD2357BC4800D596B3 /* MJRContact.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37282BFB2357BC0200D596B3 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		37282BFF2357BEEB00D596B3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37282C002357BEF900D596B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +150,7 @@
 		37282BD42357B87000D596B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MJR;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Marlon Raskin";
 				TargetAttributes = {
@@ -146,7 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37282BE72357B87100D596B3 /* ViewController.m in Sources */,
+				37282BFE2357BC4800D596B3 /* MJRContact.m in Sources */,
 				37282BE12357B87100D596B3 /* AppDelegate.m in Sources */,
 				37282BF22357B87200D596B3 /* main.m in Sources */,
 				37282BE42357B87100D596B3 /* SceneDelegate.m in Sources */,
@@ -184,7 +233,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -242,7 +291,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -289,6 +338,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6VB3396MT;
 				INFOPLIST_FILE = "Memory-Management/Info.plist";
@@ -306,6 +357,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6VB3396MT;
 				INFOPLIST_FILE = "Memory-Management/Info.plist";
