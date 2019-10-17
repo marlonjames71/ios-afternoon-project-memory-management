@@ -7,7 +7,10 @@
 //
 
 #import "MJRContactController.h"
+#import "MJRContact.h"
 
 @implementation MJRContactController
+
+
 
 @end

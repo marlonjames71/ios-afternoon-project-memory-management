@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MJRContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRContactDetailViewController : UIViewController
+
+@property (retain) MJRContact *contact;
 
 @end
 

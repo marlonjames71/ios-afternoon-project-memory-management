@@ -7,8 +7,11 @@
 //
 
 #import "MJRContactsTableViewController.h"
+#import "MJRContactDetailViewController.h"
+#import "MJRContact.h"
 
 @interface MJRContactsTableViewController ()
+
 
 @end
 
@@ -16,43 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.loadContacts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+
+    MJRContact *contact = self.loadContacts[indexPath.row];
+
+    cell.textLabel.text = contact.fullName;
+    cell.detailTextLabel.text = contact.phone;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 /*
 // Override to support editing the table view.
@@ -66,28 +57,27 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ShowContactDetailSegue"]) {
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        MJRContact *contact = self.loadContacts[indexPath.row];
+        MJRContactDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.contact = contact;
+    }
 }
-*/
+
+
+- (NSArray <MJRContact *> *)loadContacts {
+    MJRContact *contact1 = [[MJRContact alloc] initContactWithName:@"Cody Nichols" phone:@"5552556644" email:@"cody@email.com"];
+    MJRContact *contact2 = [[MJRContact alloc] initContactWithName:@"Forrest Whitaker" phone:@"5559984455" email:@"forrest@email.com"];
+    MJRContact *contact3 = [[MJRContact alloc] initContactWithName:@"Jane Goodall" phone:@"5551234567" email:@"jane@email.com"];
+
+    return @[contact1, contact2, contact3];
+};
 
 @end

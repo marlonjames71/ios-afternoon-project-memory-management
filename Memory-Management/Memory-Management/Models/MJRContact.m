@@ -10,4 +10,13 @@
 
 @implementation MJRContact
 
+- (instancetype)initContactWithName:(NSString *)name phone:(NSString *)phone email:(NSString *)email {
+    if (self = [super init]) {
+        self.fullName = name;
+        self.phone = phone;
+        self.email = email;
+    }
+    return self;
+}
+
 @end

@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MJRContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRContactsTableViewController : UITableViewController
+
+- (NSArray <MJRContact *> *)loadContacts;
 
 @end
 

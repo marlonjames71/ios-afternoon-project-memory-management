@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class MJRContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJRContactController : NSObject
+
+@property (readonly) NSArray<MJRContact *> *contactArray;
 
 @end
 
